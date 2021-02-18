@@ -1,0 +1,20 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+body img{
+    width: 100px;
+    border-radius: 10px;
+}
+.text-color{
+    color: #330603;
+}
+.search-bar{
+    color: white;
+    height: 50px;
+    width: 70%;
+}
+.css-style-card{
+    float: left;
+    width: 25%;
+}
