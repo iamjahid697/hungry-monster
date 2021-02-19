@@ -29,17 +29,17 @@ const getFood = idMeal => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
     fetch(url)
         .then(res => res.json())
-        .then(data => displayFoodInfo(data));
+        .then(data => displayFoodInfo(data.meals[0]));
 }
 
 const displayFoodInfo = food => {
     console.log(food);
     const foodDetailDiv = document.getElementById('food-details');
     const foodDetails = `
-     <h1>${food.strMeal}</h1>
-     <h3>${food.strDrinkAlternate}</h3>
-     <h3>${food.strCategory}</h3>
-     <h3>${food.strArea}</h3>
+     <h1>Meal: ${food.strMeal}</h1>
+     <h3>Drink Alternate: ${food.strDrinkAlternate}</h3>
+     <h3>Category: ${food.strCategory}</h3>
+     <h3>Area: ${food.strArea}</h3>
      `;
     foodDetailDiv.innerHTML = foodDetails;
 }
